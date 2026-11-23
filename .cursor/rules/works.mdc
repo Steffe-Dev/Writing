@@ -1,0 +1,30 @@
+---
+description: Catalog metadata for works in this writing repository
+alwaysApply: true
+---
+
+# Works
+
+Follow `README.md`. It is the grammar for this repo.
+
+A work is `shelf/slug.md` or `shelf/slug/index.md`. The catalog block goes only on that file. Part files have no front matter and must not open with a `---` line.
+
+Write keys in this order:
+
+```yaml
+---
+title: The Glass Harbor
+description: A diver finds the town's name written on the hull.
+form: short-story
+status: draft
+languages:
+  - en
+tags:
+  - sea
+published: false
+---
+```
+
+`published` is always the unquoted boolean `true` or `false`. `completed` is present only when `status` is `done`. `description` is required when `published` is true.
+
+After changing a work or the grammar, run `ruby script/validate.rb` from the repo root. A grammar change updates `README.md` and `script/validate.rb` in the same change.
