@@ -1,0 +1,57 @@
+---
+layout: default
+title: Writing
+published: true
+---
+
+{% assign forms = "short-story|flash|poem|essay|novel|fragment|song" | split: "|" %}
+{% assign total = 0 %}
+{% for form in forms %}
+  {% assign works = site.pages | where: "form", form %}
+  {% assign total = total | plus: works.size %}
+{% endfor %}
+
+{% if total == 0 %}
+<p>Nothing published yet.</p>
+{% else %}
+  {% for form in forms %}
+    {% assign works = site.pages | where: "form", form | sort: "title" %}
+    {% if works.size > 0 %}
+    <section>
+      <h2>{{ form }}</h2>
+      {% for work in works %}
+        {% assign words = work.content | strip_html | number_of_words %}
+        {% assign remaining = words %}
+        {% assign formatted = "" %}
+        {% for step in (1..12) %}
+          {% assign digit = remaining | modulo: 10 | append: "" %}
+          {% assign remaining = remaining | divided_by: 10 %}
+          {% assign place = forloop.index | modulo: 3 %}
+          {% if forloop.index > 1 and place == 1 %}
+            {% assign formatted = formatted | prepend: "," %}
+          {% endif %}
+          {% assign formatted = formatted | prepend: digit %}
+          {% if remaining == 0 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        <article>
+          <h3><a href="{{ work.url | relative_url }}">{{ work.title }}</a></h3>
+          {% if work.description %}
+          <p>{{ work.description }}</p>
+          {% endif %}
+          <p>
+            {{- formatted }}
+            {% if words == 1 %}word{% else %}words{% endif %}
+            {% if words > 0 %}
+              {% assign minutes = words | plus: 199 | divided_by: 200 %}
+              · {{ minutes }} min
+            {% endif %}
+            · {{ work.languages | join: ", " -}}
+          </p>
+        </article>
+      {% endfor %}
+    </section>
+    {% endif %}
+  {% endfor %}
+{% endif %}

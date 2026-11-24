@@ -1,0 +1,28 @@
+title: Writing
+url: https://steffe-dev.github.io
+baseurl: /Writing
+theme: minima
+permalink: pretty
+
+# Parts have no front matter. GitHub Pages always loads this plugin.
+# Turning removal on, with the default below, keeps those files off the site.
+optional_front_matter:
+  enabled: true
+  remove_originals: true
+
+readme_index:
+  enabled: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      published: false
+
+exclude:
+  - script
+  - README.md
+  - vendor
+  - Gemfile
+  - Gemfile.lock

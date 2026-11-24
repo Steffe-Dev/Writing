@@ -1,10 +1,10 @@
 # Writing
 
-This repo is the source for my writing works. Each work carries a YAML metadata block. A later index can be built from those blocks alone. This file is the grammar.
+This repo is the source for my writing works. Each work carries a YAML metadata block. GitHub Pages builds a public index from those blocks. This file is the grammar.
 
-`published: false` keeps a work off that future site. The file is still in the repo. A draft that should stay private stays uncommitted.
+`published: false` keeps a work off the site. The file is still in the repo. A draft that should stay private stays uncommitted.
 
-Word count, reading time, last edit, and the public URL are computed when an index is built. They are not fields in the block.
+Word count, reading time, and the public URL are computed when the site is built. They are not fields in the block.
 
 ## Works
 
@@ -96,6 +96,19 @@ A part has no metadata block. It must not open with a `---` line. A `---` line l
 
 Images and other non-markdown files in the work directory are assets. The validator ignores them. They sit next to `index.md`, because the directory cannot contain subdirectories.
 
+## Site
+
+GitHub Pages builds the `main` branch with Jekyll, from the repository root. The site is `https://steffe-dev.github.io/Writing/`. A push of `published: true` publishes that work. The page shows the title and the body. The public URL is the work id with a trailing slash.
+
+The homepage groups published works by form, in the order listed under Forms. A card shows the description, every language, the word count, and a reading time of 200 words a minute, rounded up. The title links to the work. With nothing published, the page says "Nothing published yet."
+
+This build does less than the grammar describes:
+
+- A multi-file work's page is `index.md` only. Parts stay in the repo. Word count and reading time count that file only.
+- The catalog does not show a last edit.
+- Asset files in a work directory are copied to the site when the work is unpublished.
+- A workflow runs `script/validate.rb` on every push and every pull request. The Pages build does not wait for it, so a work that fails the validator is still published.
+
 ## Validator
 
 The validator is `script/validate.rb`. It uses the Ruby standard library and needs nothing installed. It checks the repository that contains it.
@@ -109,3 +122,5 @@ ruby script/validate.rb
 A clean repo prints nothing and exits 0. When something is wrong, every problem is printed to stderr as `path: message`, and the command exits 1.
 
 Work files, parts, and shelf READMEs are UTF-8 without a byte order mark.
+
+GitHub runs this command on every push and every pull request.
