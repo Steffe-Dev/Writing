@@ -6,7 +6,8 @@ status: draft
 languages:
   - en
 tags:
-  - LOTU, racism
+  - lotu
+  - racism
 published: false
 ---
 Chichi (part of a discriminated-against race of humanoid rodents), walks to work. He is an intuitive master of LOTU, but the reader does not know that, and nor does he. The world around him gradually starts falling apart, revealing a utopia for rodents, but a form of hell for human beings. He vividly feels this, and watches this. But, when he gets to work, everything is back to normal again, and he gets yelled at by his human boss for being 2 minutes late (have something out of his control happen, that is human's fault). The punchline is that he used LOTU to alter his consciousness, a form of drug-like escapism, so what he saw was real, to him, but no one else will ever know about it. Hint at his deep hate, and how he intends to realise this future one day, battling with the internal conflict of having a strong moral compass, and not actually wanting to cause more suffering in the world. But not seeing another way.
