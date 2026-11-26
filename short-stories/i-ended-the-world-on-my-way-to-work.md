@@ -32,7 +32,7 @@ I spat a bit of blood to the side as I fumbled through my bag for my Pass, a tin
 
 "Ugh! You smell even worse than the others. Like a wet dog that soiled itself. Why is your uniform wet?"
 
-"I'm so sorry, Sir. It rained last night, I…"
+"I'm so sorry, Sir. It rained last night, I–"
 
 "As if it only rained for you, and not for everyone else! I don't think I can send you into the city like this! Get out of the way, you are blocking the line."
 
@@ -60,21 +60,29 @@ Lance took the Pass, taking special care not to touch my paw in the process.
 
 "Let's see…" He looked over to Max, raising an eyebrow. "Won't you look at that? He's actually telling the truth." He turned back to me.
 
-"You know what? I am feeling generous today. You may go." he said, dropping my Pass into a puddle of mud in front of me.
+"You know what? I am feeling generous today. You may go."
+
+He dropped my Pass into a puddle of mud in front of me.
 
 I bowed down further than I already was.
 
 "Thank you, Sir! Thank you so very much!" I said, as a fished out the wet piece of metal with as much grace as I could muster. When I looked up, I was startled to see Lance's face close enough to mine for his breath to blow over me. It smelled of artificial mint, with the vaguest tinge of alcohol catching a lift on the current.
 
-"Don't ever dare show up here this dishevelled. You understand?" I nodded. "There is a reason why your kind does not live among us, you know. Today I was reminded of that fact"
+"Don't ever dare show up here this dishevelled. You understand?"
 
+I nodded.
+
+"There is a reason why your kind does not live among us, you know. Today I was reminded of that fact"
 
 A sizable stretch of uninhabited foliage lay between the slums and the city. I can't say that I blame them. Well, I don't blame them for putting a few clicks between themselves and shit, that is. I do blame them for pretty much everything else. I couldn't find anything sensible to say to him before I finally walked through the gates. I don't think he wanted me to say anything. I wore the expression of a wise man who just passed along an essential truism to his kin. No matter, I was finally free to head towards the city. I walked as fast as I could on my hind legs. I tried to refrain from running on all fours while they were still watching. As soon as they disappeared between the trees behind me, however, my paws hit the dirt. I knew no-one else on this road would bat an eye. They were my fellow owners of shit, you see. As the distance grew between myself and the Gates, I once again allowed myself to feel the hate. This time, the tears overwhelmed my defenses.
 
+[The progressive ending of the world as he walks to work, reaching a pinnacle as he gets there]
 It was at that moment that time seemed to tire of it's clockwork march to oblivion. My tears drifted down below me as if suspended by upward currents. Rebellion stirred within the council of reality. The rainbow, often seen as a paragon of discipline, a family operating in perfect harmony, seemed to descend into a feud. Like something had been brewing under their skin. Purple was the first to fly into a rage. Rays of light flew from the horizon like needles, lavender threads trailing in their wake. Upon hitting my frozen tears they exploded into a tapestry stretching into all directions. Her brothers and sisters had since started their pursuit. The ground beneath my feet cracked into scars of azure, and the sky had become a milky white, as if the earth was a torrent of paint hurtling towards a blank canvas. Everyone around me seemed to be mesmerised by the spectacle, unable to do much beyond staring. This was hardly surprising. Outside the slums most of us did not show much emotion, let alone opinion. However, when I looked closer I saw something magical. It was like a ripple flowed through all of them, visible only in the deepest recesses of their eyes. It was like the hate pulsating through my body had escaped, and was now pulsating within each one of them. One by one they sprung into action, as if time had been given a second wind. A river of colour and anger started flowing through the forest, heading straight for the oblivious city still slumbering on the horizon.
 
 Up until this point, everything had been mostly silent, apart from the nature's odd tick, click, and rustle. But it was then that my comrades found their voices. It started as a simple chorus of dissent, gradually growing as the rainbow household continued to quarrel about who fucked whose wife. Shouts rung out. Most of them, I must admit, were about smelling, living in, being covered in, and generally being associated with, shit. Some of them, though, were about a world each and every one of us imagined, but did not dare speak about. As we charged towards the pristine walls surrounding the city, I could not help realising that no-one was leading us. No-one had to. We knew what we wanted. Or, I should rather say, we knew exactly what it was we didn't want.
 
-[The progressive ending of the world as he walks to work, reaching a pinnacle as he gets there]
+The humans frequently joke about how the inhabitants of the slums multiply with wanton abandon, based off our likeness to lesser beings often kept as pets, but in this case it seemed an apt metaphor for what I saw. Every passing moment seemed to produce another wave of us. Were there really this many of us? Well, the humans tried to suppress any form of culture among us, for fear of us developing a sense of unity, so there had never been a reason for this many of us to gather at a single location. It was truly a spectacle, thousands of voices, teeth, and claws being enveloped by a torrent of colour.
+
+At first the humans didn't seem to notice, but, as we drew near, horns sounded and faces appeared atop the walls.
 
 [Epilogue]
