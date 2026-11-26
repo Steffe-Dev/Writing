@@ -13,6 +13,8 @@ ALLOWED_KEYS = %w[title description form status completed languages tags publish
 KEBAB = /\A[a-z0-9]+(?:-[a-z0-9]+)*\z/.freeze
 LOCALE = /\A[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-[A-Z]{2})?\z/.freeze
 PUBLISHED_LINE = /\Apublished:[ \t]*(true|false)[ \t]*(?:#.*)?\z/.freeze
+ASSIGNMENT_INCLUDE = "{% include_relative brief.md %}"
+ASSIGNMENT_HEADING = "# The assignment"
 
 def rel(path)
   path.relative_path_from(ROOT).to_s
@@ -217,6 +219,37 @@ def check_metadata(path, errors, yaml_text, data)
   check_tags(path, errors, data["tags"]) if data.key?("tags")
 end
 
+def assignment?(data)
+  tags = data["tags"]
+  tags.is_a?(Array) && tags.include?("assignment")
+end
+
+def check_assignment(path, errors, text, data)
+  return unless assignment?(data)
+
+  if path.basename.to_s != "index.md"
+    errors << "#{rel(path)}: a work tagged assignment must be a directory with index.md"
+    return
+  end
+
+  brief = path.dirname.join("brief.md")
+  if brief.file?
+    brief_text = read_text(brief, errors)
+    if brief_text
+      first = brief_text.each_line.find { |line| !line.strip.empty? }
+      if first.nil? || first.strip != ASSIGNMENT_HEADING
+        errors << "#{rel(brief)}: a brief must open with the heading The assignment"
+      end
+    end
+  else
+    errors << "#{rel(path.dirname)}: a work tagged assignment must contain brief.md"
+  end
+
+  return if text.each_line.any? { |line| line.strip == ASSIGNMENT_INCLUDE }
+
+  errors << "#{rel(path)}: index.md must contain the line #{ASSIGNMENT_INCLUDE}"
+end
+
 def validate_work_text(path, errors, text)
   yaml_text = extract_metadata(text)
   if yaml_text.nil?
@@ -233,6 +266,7 @@ def validate_work_text(path, errors, text)
   end
 
   check_metadata(rel(path), errors, yaml_text, data)
+  check_assignment(path, errors, text, data) if data.is_a?(Hash)
 end
 
 def validate_work_file(path, errors)

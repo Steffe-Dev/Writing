@@ -26,3 +26,5 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  # A grade sits beside the work and is never a public file.
+  - "*/*/grade.html"

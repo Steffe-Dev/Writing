@@ -96,17 +96,25 @@ A part has no metadata block. It must not open with a `---` line. A `---` line l
 
 Images and other non-markdown files in the work directory are assets. The validator ignores them. They sit next to `index.md`, because the directory cannot contain subdirectories.
 
+## Assignments
+
+A work tagged `assignment` is a practice drill and a directory. `index.md` holds the metadata and the prose. `brief.md` is a part, and its first non-empty line is `# The assignment`. `index.md` contains a line whose text is exactly `{% include_relative brief.md %}`. The prose is written above that line. On a published page the brief follows the prose, because the include pulls the part into `index.md`.
+
+`grade.html` may sit in the directory. The site build excludes every `grade.html` in a work directory, so a grade is never copied to the site.
+
 ## Site
 
 GitHub Pages builds the `main` branch with Jekyll, from the repository root. The site is `https://steffe-dev.github.io/Writing/`. A push of `published: true` publishes that work. The page shows the title and the body. The public URL is the work id with a trailing slash.
 
-The homepage groups published works by form, in the order listed under Forms. A card shows the description, every language, the word count, and a reading time of 200 words a minute, rounded up. The title links to the work. With nothing published, the page says "Nothing published yet."
+The homepage groups published works by form, in the order listed under Forms. A card shows the description, every language, the length, and a reading time. The title links to the work. With nothing published, the page says "Nothing published yet."
+
+Length is the word count. Reading time is 200 words a minute, rounded up. A work whose primary language is `ja` uses the number of non-whitespace characters instead, at 500 characters a minute, rounded up. An assignment's length is the prose only: the rendered page before the heading `The assignment`. Every other work counts `index.md`.
 
 This build does less than the grammar describes:
 
-- A multi-file work's page is `index.md` only. Parts stay in the repo. Word count and reading time count that file only.
+- A multi-file work's page is `index.md` only. Parts stay in the repo, unless that file includes a part. An assignment includes `brief.md`.
 - The catalog does not show a last edit.
-- Asset files in a work directory are copied to the site when the work is unpublished.
+- Asset files in a work directory are copied to the site when the work is unpublished. `grade.html` is excluded and is never copied.
 - A workflow runs `script/validate.rb` on every push and every pull request. The Pages build does not wait for it, so a work that fails the validator is still published.
 
 ## Validator

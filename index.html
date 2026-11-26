@@ -20,8 +20,25 @@ published: true
     <section>
       <h2>{{ form }}</h2>
       {% for work in works %}
-        {% assign words = work.content | strip_html | number_of_words %}
-        {% assign remaining = words %}
+        {% assign counted = work.content %}
+        {% if work.tags contains "assignment" %}
+          {% assign counted = work.content | split: 'id="the-assignment"' | first %}
+        {% endif %}
+        {% assign plain = counted | strip_html %}
+        {% assign primary = work.languages | first %}
+        {% if primary == "ja" %}
+          {% assign compact = plain | strip_newlines | remove: " " | remove: "　" %}
+          {% assign amount = compact | size %}
+          {% assign rate = 500 %}
+          {% assign singular = "character" %}
+          {% assign plural = "characters" %}
+        {% else %}
+          {% assign amount = plain | number_of_words %}
+          {% assign rate = 200 %}
+          {% assign singular = "word" %}
+          {% assign plural = "words" %}
+        {% endif %}
+        {% assign remaining = amount %}
         {% assign formatted = "" %}
         {% for step in (1..12) %}
           {% assign digit = remaining | modulo: 10 | append: "" %}
@@ -42,9 +59,10 @@ published: true
           {% endif %}
           <p>
             {{- formatted }}
-            {% if words == 1 %}word{% else %}words{% endif %}
-            {% if words > 0 %}
-              {% assign minutes = words | plus: 199 | divided_by: 200 %}
+            {% if amount == 1 %}{{ singular }}{% else %}{{ plural }}{% endif %}
+            {% if amount > 0 %}
+              {% assign pad = rate | minus: 1 %}
+              {% assign minutes = amount | plus: pad | divided_by: rate %}
               · {{ minutes }} min
             {% endif %}
             · {{ work.languages | join: ", " -}}
