@@ -54,13 +54,13 @@ profiles:
             result: pass
           - text: No sentence tells the reader what the person feels without a visible action or object attached.
             kind: voting
-            result: fail
+            result: pass
           - text: The prose above the include line is between 150 and 400 words.
             kind: length
             result: pass
         mechanics:
-          viewpoint: fail
-          tense: fail
-          plan-residue: pass
-          stock-phrasing: fail
-          surface: fail
+          viewpoint: 3
+          tense: 4
+          plan-residue: 5
+          stock-phrasing: 4
+          surface: 4

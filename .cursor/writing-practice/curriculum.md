@@ -156,10 +156,12 @@ A canon drill's situation starts with `This drill uses only what {title} ({work 
 
 A probe does not call the dimension a weakness. A hold shows the votes that put the dimension in the lead.
 
-Checks are one line each, with no colon, no `--`, and no `<!--`. A stranger can mark each one pass or fail from the prose. `Make it haunting` is not a check. Write four voting checks about the current dimension, then the length check:
+Under the phase line, write "What you are practicing" in plain English, about 70 words. Name the skill, show what it looks like in one sentence, and say where the attention stays for this drill.
 
-- Words: `The prose above the include line is between 150 and 400 words`
-- Characters: `The prose above the include line is between 400 and 1000 characters, not counting whitespace`
+Checks are one line each, with no colon, no `--`, and no `<!--`. Each task check states `Pass if` and `Fail if`. A fail includes a verdict or a claimed motive, not only a feeling. A stranger can mark it from the prose. `Make it haunting` is not a check. Write four task checks about the current dimension, then the length check:
+
+- Words: `Pass if the prose above the include line is between 150 and 400 words. Fail if it falls outside that band.`
+- Characters: `Pass if the prose above the include line is between 400 and 1000 characters, not counting whitespace. Fail if it falls outside that band.`
 
 Use the drill's real band in that sentence.
 
@@ -167,6 +169,10 @@ Use the drill's real band in that sentence.
 # The assignment
 
 en · Probe 1 of 4: dramatization
+
+## What you are practicing
+
+Dramatization means a body does something and the change happens in that action. "She crosses the room and takes the key" is dramatized. "She decides to be brave" is a verdict. Stay with the hands and the object until something has changed. Do not step out to judge it.
 
 ## Situation
 
@@ -182,32 +188,42 @@ Write above the include line in index.md. One scene. No notes to yourself.
 
 ## Checks
 
-1. The first sentence contains a physical action.
-2. By the end, the person's location or their grip on an object has changed.
-3. The change follows from an earlier action in the scene, not from a new wish announced at the end.
-4. No sentence tells the reader what the person feels without a visible action or object attached.
-5. The prose above the include line is between 150 and 400 words.
+1. Pass if the first sentence contains a physical action. Fail if it only thinks, feels, or announces a motive.
+2. Pass if, by the end, the person's location or their grip on an object has changed. Fail if the scene ends on a decision.
+3. Pass if that change follows from an earlier action. Fail if a new wish arrives in the last sentence and does the work.
+4. Pass if every feeling or verdict has a visible action or object in its sentence. Fail if the sentence only accuses, explains, or names a feeling.
+5. Pass if the prose above the include line is between 150 and 400 words. Fail if it falls outside that band.
 
 ## Evidence
 
 None of the shelves bears on this dimension.
 ```
 
-When a passage bears on a probe, quote it under Evidence with the work id, and do not call it a weakness. When nothing bears, use that exact sentence: `None of the shelves bears on this dimension.`
+When a passage bears on a probe, quote it under Evidence with the work id, then one sentence saying why it was chosen. Do not call it a weakness. When nothing bears, use that exact sentence: `None of the shelves bears on this dimension.`
 
 A hold's Evidence names each failed voting check that gave the dimension its votes: the drill slug, the check text, and the failing span from that grade. A work quote may follow. A work under the threshold cannot be the only item in that section.
 
 ## Mechanics
 
-Marked on every grade, in this order. They do not vote.
+Scored on every grade, in this order. The score does not vote, and it does not choose the next drill.
 
-| Key | Fail |
+| Score | Word | Meaning |
+| --- | --- | --- |
+| 5 | clean | Nothing to mark. |
+| 4 | slip | One small slip. The rest is clean. |
+| 3 | miss | One real miss a reader stumbles on. |
+| 2 | recurrence | The miss happens again. |
+| 1 | broken | It runs through the piece. |
+
+A score under 5 has a quote and one sentence that names the rule. If that sentence cannot name the rule, the score is 5. The record stores the integer. The reason stays in the grade.
+
+| Key | Rule the reason has to name |
 | --- | --- |
-| viewpoint | A second mind is entered, or a mind is read with no visible cue. |
-| tense | The narration leaves its primary tense. A quoted speaker may use another. |
+| viewpoint | A second mind is entered, or a motive is claimed with no visible cue. |
+| tense | The narration's primary tense, and the verb that leaves it. A quoted speaker may use another. |
 | plan-residue | Brackets, a heading that is an outline, `TODO`, or a note to the writer. Summary inside the fiction is a dramatization failure, not this one. |
-| stock-phrasing | A phrase you can name as stock, and can quote. If you cannot name the pattern, this check passes. |
-| surface | Spelling, agreement, a homophone, a particle, or an idiom. One result. Quote one example. |
+| stock-phrasing | The stock pattern, named in a few words. If you cannot name it, the score is 5. |
+| surface | Spelling, agreement, a homophone, a particle, or an idiom. Quote the one example. |
 
 ## Files of a drill
 
@@ -249,7 +265,7 @@ published: false
 
 Leave one word on each line, pass or fail. Delete this whole comment to skip.
 
-- The first sentence contains a physical action: pass / fail
+- Pass if the first sentence contains a physical action. Fail if it only thinks, feels, or announces a motive: pass / fail
 -->
 ```
 
@@ -282,10 +298,10 @@ One marks bullet per check, in order, the check text copied exactly, then `: pas
   graded-at: null
   grade: null
   checks:
-    - text: The first sentence contains a physical action.
+    - text: Pass if the first sentence contains a physical action. Fail if it only thinks, feels, or announces a motive.
       kind: voting
       result: null
-    - text: The prose above the include line is between 150 and 400 words.
+    - text: Pass if the prose above the include line is between 150 and 400 words. Fail if it falls outside that band.
       kind: length
       result: null
   mechanics:
@@ -296,7 +312,7 @@ One marks bullet per check, in order, the check text copied exactly, then `: pas
     surface: null
 ```
 
-`status` is `live`, `graded`, or `shelved`. `graded-at` is a quoted `YYYY-MM-DD` or null. `grade`, once set, is the markdown link `[grade](../../assignments/<slug>/grade.html)`. `next-line` is set on the first grade and kept on a regrade. `canon-work` is a work id or null.
+`status` is `live`, `graded`, or `shelved`. `graded-at` is a quoted `YYYY-MM-DD` or null. `grade`, once set, is the markdown link `[grade](../../assignments/<slug>/grade.html)`. `next-line` is set on the first grade and kept on a regrade. `canon-work` is a work id or null. A graded mechanic is an integer from 1 to 5. `null` means not yet graded. The reason for a score is not stored here.
 
 Rewrite `record.md` with the two comment lines on top and keys in this shape. Then load it.
 
@@ -316,20 +332,26 @@ Words are whitespace-separated. Japanese characters are every character that is 
 
 If no comment contains `## My marks`, skip calibration. If it does, there is one bullet per brief check, in order. The text after the last colon, trimmed, is `pass` or `fail`. Anything else, or the wrong number of bullets, stops the grade. No grade file. The phase does not move. Say to finish the marks or delete the comment.
 
-Calibration counts brief checks, the four voting checks and the length check. A divergence is a mark that differs from the rubric. The line is plain: `Diverged on 2 of 5 brief checks:` and the check texts. Moore does not write it. A later grade after the comment is gone omits the line.
+Calibration counts brief checks, the four task checks and the length check. A divergence is a mark that differs from the rubric. The line names the count and, for each split, one sentence saying why the two marks differ. Moore does not write it. When nothing splits, omit the line. A later grade after the comment is gone omits it too.
 
 ## Grade report
 
 `grade.html` is UTF-8, English, and links to `index.md`. It is excluded from the site. Replacing it is the whole history. Do not keep the old file.
 
-The page has:
+The page is one self-contained file. Warm paper (`#f3efe6`), near-black ink, a serif for the prose and for Moore (`Iowan Old Style`, `Palatino Linotype`, Palatino, Georgia), and a system sans for the labels. No spreadsheet, no wide-tracked capitals.
 
-1. The phase line, the date, the work id, and a link to `index.md`.
-2. Every brief check, pass or fail, and a quote from the prose on each fail.
-3. The five mechanics, in the table order, the same way.
-4. The lines `Voting: 3 of 4` and `Length: pass` or `Length: fail`. No letter and no score out of 100.
-5. The calibration line, when the marks were complete.
-6. One plain sentence: `Next: {next-line}.` On a first grade, `next-line` is the phase line of the drill create will issue next. When this grade sets `pending: reassess`, compute that preview from the record after this drill's results are written, and before any shelf is reread. A regrade keeps the stored `next-line`.
-7. Moore, 80 to 140 English words. He quotes two substrings of the prose, one that earns its place and one that does not. If the prose has only one sentence, he says so and both quotes are taken from it. If nothing earns its place, he says so and the first quote is the least slack span. He judges the fictional move. He does not add a check, change a result, or name a different next drill. Notes on spelling, particles, agreement, and idiom stay on the surface row.
+The page has, in this order:
+
+1. The phase line, the title linked to `index.md`, the work id, and the date.
+2. The four task checks. Each is a stack: Pass or Fail, the check, then one plain sentence of why. A fail includes a quote.
+3. One line: `{Dimension}: 3 of 4 checks passed.` Use the phase-line name of the dimension.
+4. Length on its own line, with the count and the band. It is not one of the four.
+5. The five mechanics. Each shows the numeral, the scale-word (clean, slip, miss, recurrence, broken), the name, the quote when the score is under 5, and the reason.
+6. The calibration line, when a mark splits from the rubric.
+7. "On this page": one plain revision this piece needs.
+8. "Next drill": the stored `next-line` and nothing else. On a first grade, that line is the phase line create will issue next. When this grade sets `pending: reassess`, compute the preview from the record after this drill's results are written, and before any shelf is reread. A regrade keeps the stored `next-line`.
+9. Moore, 80 to 140 English words, carrying the same revision as "On this page." He quotes two substrings of the prose, one that earns its place and one that does not. If the prose has only one sentence, he says so and both quotes are taken from it. If nothing earns its place, he says so and the first quote is the least slack span. He does not add a check, change a result, or name a different next drill. Notes on spelling, particles, agreement, and idiom stay on the surface score.
+
+The word "voting" does not appear on the page.
 
 Then run `ruby script/validate.rb` from the repo root. Fix a failure before treating the run as done. Do not commit.

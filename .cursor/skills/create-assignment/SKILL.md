@@ -29,7 +29,7 @@ Issue the drill the current stage describes. The dimension is not negotiable.
 
 Pick container, place, relationship, pressure, and proper nouns with the variance rules. Cold by default. A canon drill follows the curriculum.
 
-Write four voting checks and one length check. Copy them into the marks comment.
+Write the practice section, then four task checks and one length check. Each check says Pass if and Fail if, with no colon. A fail includes a verdict or a claimed motive. Copy each check into the marks comment.
 
 `title` and `description` are in the profile's language and name the piece, not the exercise. Build the slug with the curriculum's Ruby one-liner. A Japanese title gets an English gloss for the slug only.
 
