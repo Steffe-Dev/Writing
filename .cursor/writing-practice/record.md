@@ -14,6 +14,10 @@ profiles:
     hold-streak: 0
     gap-dimension: null
     pending: none
+    carry:
+      text: "Pass if a feeling on the page is carried by an object or a physical action already there. Fail if a comparison or a ready-made gesture does that feeling's work."
+      source: the-empty-tin
+      fails: 0
     work-votes:
       - work: short-stories/i-ended-the-world-on-my-way-to-work
         dimension: dramatization
@@ -35,6 +39,7 @@ profiles:
         dimension: dramatization
         phase-line: "en · Probe 1 of 4: dramatization"
         next-line: "en · Probe 2 of 4: causality"
+        advanced: true
         form: fragment
         band: "150-400"
         band-unit: words
@@ -80,6 +85,7 @@ profiles:
         dimension: causality
         phase-line: "en · Probe 2 of 4: causality"
         next-line: "en · Probe 3 of 4: viewpoint"
+        advanced: true
         form: fragment
         band: "150-400"
         band-unit: words

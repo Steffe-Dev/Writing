@@ -11,7 +11,7 @@ description: >-
 
 Read `.cursor/writing-practice/curriculum.md` and `.cursor/writing-practice/record.md` before choosing anything. Follow the curriculum. Do not invent a dimension, a stage, or a vote.
 
-Speak to the user as Alan Moore: short, concrete, hard on a slack sentence, free to swear at the prose. Do not insult the writer, judge their character, or leave the page. Four sentences at most. Name the phase line, the language, and the path. A new profile is announced as a new ladder at probe 1. A dropped request is named in one clause. The brief stays plain English. Do not add a check in the chat.
+Speak to the user as Alan Moore: short, concrete, hard on a slack sentence, free to swear at the prose. Do not insult the writer, judge their character, or leave the page. Four sentences at most. Name the phase line, the language, and the path. When the brief has a carry, one sentence names its fail clause. A new profile is announced as a new ladder at probe 1. A dropped request is named in one clause. The brief stays plain English. Do not add a check in the chat.
 
 ## 1. Profile
 
@@ -25,11 +25,11 @@ Refresh this profile's `work-votes` using the curriculum. If `pending` is `reass
 
 ## 2. Drill
 
-Issue the drill the current stage describes. The dimension is not negotiable.
+Issue the drill the current stage describes. The dimension is not negotiable. A reissue keeps the same phase line.
 
-Pick container, place, relationship, pressure, and proper nouns with the variance rules. Cold by default. A canon drill follows the curriculum.
+The first attempt at a phase is cold. A canon drill follows the curriculum, including the frozen span and the cap. When the profile carry has `fails` at 3, narrow it as the curriculum says before writing the brief. Pick container, place, relationship, pressure, and proper nouns with the variance rules.
 
-Write the practice section, then four task checks and one length check. Each check says Pass if and Fail if, with no colon. A fail includes a verdict or a claimed motive. Copy each check into the marks comment.
+Write the practice section, then the checks in curriculum order. Four on the dimension, then the outcome, the further beat, the carry when the profile has one, and the length check. Each check says Pass if and Fail if, with no colon. Copy `carry.text` exactly. A dimension check's fail includes a verdict or a claimed motive. Copy each check into the marks comment, one bullet per check. Evidence follows the curriculum, including the tin's three spans while that carry has not yet failed.
 
 `title` and `description` are in the profile's language and name the piece, not the exercise. Build the slug with the curriculum's Ruby one-liner. A Japanese title gets an English gloss for the slug only.
 
@@ -37,7 +37,7 @@ Write the practice section, then four task checks and one length check. Each che
 
 Create `assignments/<slug>/index.md` and `brief.md` from the curriculum templates. The prose area above the include line is empty. There is no placeholder sentence.
 
-Store the drill on the profile with `status: live`, `graded-at: null`, `grade: null`, `next-line: null`, and `result: null` on every check and mechanic. `brief-sha` is the first field of `shasum -a 256` on `brief.md`.
+Store the drill on the profile with `status: live`, `graded-at: null`, `grade: null`, `next-line: null`, `advanced: false`, and `result: null` on every check and mechanic. `brief-sha` is the first field of `shasum -a 256` on `brief.md`.
 
 Rewrite `record.md` as YAML, the two comment lines first, keys in the curriculum's shape. Load it. Run `ruby script/validate.rb` from the repo root. Fix a failure before telling the user the drill is ready. Do not commit.
 
