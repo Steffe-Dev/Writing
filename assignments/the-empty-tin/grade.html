@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Grade: The Empty Tin</title>
+<style>
+  :root {
+    --ink: #1c1915;
+    --quiet: #5c564c;
+    --paper: #f3efe6;
+    --inset: #e7e0d2;
+    --pass: #24543c;
+    --fail: #8a3d32;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 1.125rem/1.55 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  main { max-width: 38rem; margin: 0 auto; padding: 3.25rem 1.4rem 5rem; }
+  a { color: inherit; }
+  .phase, .meta, h2, .result, .score, .tally, .length {
+    font-family: system-ui, sans-serif;
+  }
+  .phase, .meta { color: var(--quiet); font-size: 0.82rem; margin: 0; }
+  h1 { font-size: 2rem; font-weight: 560; line-height: 1.15; margin: 0.35rem 0 0.3rem; }
+  h2 { font-size: 0.95rem; font-weight: 650; margin: 2.4rem 0 0.7rem; }
+  h3 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+  .check { margin: 0 0 1.15rem; padding-bottom: 1.15rem; border-bottom: 1px solid #e0d8ca; }
+  .check p { margin: 0.25rem 0 0; }
+  .result { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin: 0; }
+  .pass { color: var(--pass); }
+  .fail { color: var(--fail); }
+  .prompt { font-weight: 600; }
+  .why { color: var(--ink); }
+  q { font-style: italic; }
+  .tally { font-weight: 650; margin: 0.2rem 0; }
+  .length { margin: 0.2rem 0 0; color: var(--quiet); }
+  .mechanic { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.2rem 0.9rem; margin: 0 0 1.2rem; }
+  .score { margin: 0; }
+  .score b { display: block; font-size: 1.7rem; font-weight: 620; line-height: 1; }
+  .score span { color: var(--quiet); font-size: 0.78rem; }
+  .mechanic p { margin: 0.3rem 0 0; }
+  aside, .next {
+    margin-top: 2rem;
+    padding: 0.15rem 0 0.15rem 1rem;
+    border-left: 3px solid var(--ink);
+  }
+  aside h2, .next h2 { margin-top: 0; }
+  aside p, .next p { margin: 0.3rem 0 0; }
+  .moore p { margin: 0.4rem 0 0; }
+</style>
+</head>
+<body>
+<main>
+<p class="phase">en · Probe 2 of 4: causality</p>
+<h1><a href="index.md">The Empty Tin</a></h1>
+<p class="meta">assignments/the-empty-tin · 2026-11-27</p>
+
+<h2>The task</h2>
+<article class="check">
+  <p class="result pass">Pass</p>
+  <p class="prompt">Pass if the first sentence gives a fact that a later action uses. Fail if it only thinks, feels, or announces a motive.</p>
+  <p class="why">He looks up from the cup, so the stare is the fact the next move uses.</p>
+</article>
+<article class="check">
+  <p class="result pass">Pass</p>
+  <p class="prompt">Pass if one spoken sentence causes the next physical move. Fail if the narrator explains that move with a feeling or a verdict.</p>
+  <p class="why">The snow line sends him to the coat, and the narrator does not explain the toss with a feeling or a verdict.</p>
+</article>
+<article class="check">
+  <p class="result pass">Pass</p>
+  <p class="prompt">Pass if that move uses a fact already on the page. Fail if a new wish arrives and does the work.</p>
+  <p class="why">The toss uses the coat on the chair, the full pocket, and the empty tin, and no new wish arrives to do the work.</p>
+</article>
+<article class="check">
+  <p class="result pass">Pass</p>
+  <p class="prompt">Pass if the last change in who holds an object, or who is in the room, follows from the speech just before it. Fail if the last sentence judges the relationship or names a motive.</p>
+  <p class="why">The ticket leaves his hand for the tin straight after the snow line, and the last sentence does not judge the pair or name a motive.</p>
+</article>
+<p class="tally">Causality: 4 of 4 checks passed.</p>
+<p class="length">Length: pass. 156 words, inside 150–400.</p>
+
+<h2>Mechanics</h2>
+<article class="mechanic">
+  <p class="score"><b>5</b> <span>clean</span></p>
+  <div>
+    <h3>Viewpoint</h3>
+    <p class="why">No second mind is entered, and the money motive has the thin pot as its cue.</p>
+  </div>
+</article>
+<article class="mechanic">
+  <p class="score"><b>5</b> <span>clean</span></p>
+  <div>
+    <h3>Tense</h3>
+    <p class="why">The narration stays past, and the other tenses sit inside the quoted speech.</p>
+  </div>
+</article>
+<article class="mechanic">
+  <p class="score"><b>5</b> <span>clean</span></p>
+  <div>
+    <h3>Plan residue</h3>
+    <p class="why">No brackets, outline headings, or notes to the writer.</p>
+  </div>
+</article>
+<article class="mechanic">
+  <p class="score"><b>2</b> <span>recurrence</span></p>
+  <div>
+    <h3>Stock phrasing</h3>
+    <p><q>in one fluid motion</q></p>
+    <p class="why">"Fluid motion" is the stock action phrase, and the same ready-made gesture shows up again in the tightened jaw and the boiling kettle.</p>
+  </div>
+</article>
+<article class="mechanic">
+  <p class="score"><b>5</b> <span>clean</span></p>
+  <div>
+    <h3>Surface</h3>
+    <p class="why">Nothing to mark in the spelling, the agreement, or the idiom.</p>
+  </div>
+</article>
+
+<aside>
+  <h2>On this page</h2>
+  <p>Cut "Hester resembled a kettle, slowly bubbling towards a boiling point." The snow line is the cause, and the ticket in the tin is the effect.</p>
+</aside>
+<section class="next">
+  <h2>Next drill</h2>
+  <p>en · Probe 3 of 4: viewpoint.</p>
+</section>
+<section class="moore">
+  <h2>Moore</h2>
+  <p>The toss is the one honest cause. "tossed it into the tin" earns its place: the coat is already on the chair, the pocket is already full, and the rent tin is already empty, so the hand has a fact to obey. "Hester resembled a kettle, slowly bubbling towards a boiling point" earns nothing. Cut it. That sentence leaves the talk to announce that she is boiling, and the pocket question after it is the line that puts the tin and the pocket on the table. Her line about the snow is what shoves him. Let that line stand, and let the ticket hit the tin, with the kettle gone.</p>
+</section>
+</main>
+</body>
+</html>

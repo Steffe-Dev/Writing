@@ -7,7 +7,7 @@ profiles:
   en:
     enabled: true
     stage: opening-probes
-    opening-index: 2
+    opening-index: 3
     follow-index: 0
     hold-dimension: null
     hold-rep: 0
@@ -64,3 +64,48 @@ profiles:
           plan-residue: 5
           stock-phrasing: 4
           surface: 4
+      - slug: the-empty-tin
+        path: assignments/the-empty-tin
+        title: The Empty Tin
+        language: en
+        container: dialogue
+        situation: Hester tells Piet the rent tin is empty, and his answer moves the ticket or the tin.
+        place: kitchen
+        relationship: kin
+        pressure: money
+        proper-nouns:
+          - Hester
+          - Piet
+        canon-work: null
+        dimension: causality
+        phase-line: "en · Probe 2 of 4: causality"
+        next-line: "en · Probe 3 of 4: viewpoint"
+        form: fragment
+        band: "150-400"
+        band-unit: words
+        brief-sha: "1e9a082f26377950c097d610623ca52d593366c93e140b4337288795ab95eeef"
+        status: graded
+        graded-at: "2026-11-27"
+        grade: "[grade](../../assignments/the-empty-tin/grade.html)"
+        checks:
+          - text: Pass if the first sentence gives a fact that a later action uses. Fail if it only thinks, feels, or announces a motive.
+            kind: voting
+            result: pass
+          - text: Pass if one spoken sentence causes the next physical move. Fail if the narrator explains that move with a feeling or a verdict.
+            kind: voting
+            result: pass
+          - text: Pass if that move uses a fact already on the page. Fail if a new wish arrives and does the work.
+            kind: voting
+            result: pass
+          - text: Pass if the last change in who holds an object, or who is in the room, follows from the speech just before it. Fail if the last sentence judges the relationship or names a motive.
+            kind: voting
+            result: pass
+          - text: Pass if the prose above the include line is between 150 and 400 words. Fail if it falls outside that band.
+            kind: length
+            result: pass
+        mechanics:
+          viewpoint: 5
+          tense: 5
+          plan-residue: 5
+          stock-phrasing: 2
+          surface: 5
